@@ -1,17 +1,18 @@
 import cv2
 import mediapipe as mp
 import requests
+import time
 
 cap = cv2.VideoCapture(0)
 
-x = "192.168.42.77"
+x = "10.244.194.77"
 
 mpHands = mp.solutions.hands
 hands = mpHands.Hands(max_num_hands=1)
 mpDraw = mp.solutions.drawing_utils
 
 try:
-    r = requests.get("http://"+x+"/forw", timeout=1)
+    r = requests.get("http://"+x+"/stop", timeout=1)
     print("Success:", r.status_code)
 except Exception as e:
     print("Failed:", e)
