@@ -1,7 +1,7 @@
 #include <WiFi.h>              // For Wi-Fi connection on ESP32
 #include <WebServer.h>         // For HTTP server on ESP32
-const char* ssid = "POCO";   // Enter SSID here
-const char* password = "qevt1738"; // Enter Password here
+const char* ssid = "Vivo V40e";   // Enter SSID here
+const char* password = "20102636 "; // Enter Password here
 
 WebServer server(80);
 
@@ -67,4 +67,5 @@ void handle_stop() {
 
 void handle_NotFound(){
   server.send(404, "text/plain", "Not found");
+
 }
